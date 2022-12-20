@@ -3,18 +3,12 @@ import java.util.Scanner;
 public class ExNota {
     public static void main(String[] args) {
 
-        int nota;
+        String[] nomesFila = new String[3];
+        Scanner nome = new Scanner(System.in);
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Nota: ");
-        nota = scan.nextInt();
-
-        while (nota < 0 || nota > 10) {
-            System.out.println("Nota Inválida! Digite Novamente: ");
-            nota = scan.nextInt();
+        for (int i = 0; i < nomesFila.length; i++) {
+            nomesFila[i] = nome.next();
+            System.out.format("%s - esta na posicao: %d%n", nomesFila[i], (i+1));
         }
-        if (nota >= 0 && nota <= 10)
-            System.out.println("Obrigada!");
-
     }
 }
